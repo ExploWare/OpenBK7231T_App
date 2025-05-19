@@ -1,5 +1,5 @@
 #pragma once
-
+#include "stdarg.h"
 #include "../httpserver/new_http.h"
 #include "../cmnds/cmd_public.h"
 
@@ -53,10 +53,10 @@ void KP18058_Init();
 void SM15155E_Init();
 
 void SM16703P_Init();
-void SM16703P_setPixel(int pixel, int r, int g, int b);
-void SM16703P_setPixelWithBrig(int pixel, int r, int g, int b);
-void SM16703P_setAllPixels(int r, int g, int b);
-void SM16703P_scaleAllPixels(int scale);
+void SM16703P_setPixel(int pixel, int r, int g, int b, ...);
+void SM16703P_setPixelWithBrig(int pixel, int r, int g, int b, ...);
+void SM16703P_setAllPixels(int r, int g, int b, ...);
+void SM16703P_scaleAllPixels(int scale, int channels);
 void SM16703P_Show();
 extern uint32_t pixel_count;
 

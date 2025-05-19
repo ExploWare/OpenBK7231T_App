@@ -51,7 +51,7 @@ uint16_t count = 0;
 int direction = 1;
 void fadeToBlackBy(uint8_t fadeBy)
 {
-	SM16703P_scaleAllPixels(255-fadeBy);
+	SM16703P_scaleAllPixels(255-fadeBy, -1);
 }
 void ShootingStar_Run() {
 	int tail_length = 32;

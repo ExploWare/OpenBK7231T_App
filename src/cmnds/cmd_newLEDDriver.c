@@ -655,7 +655,13 @@ void apply_smart_light() {
 #endif
 #if	ENABLE_DRIVER_SM16703P
 	if (pixel_count > 0 && (g_lightMode != Light_Anim || g_lightEnableAll == 0)) {
-		SM16703P_setAllPixels(finalColors[0], finalColors[1], finalColors[2]);
+		if (finalColors.size() == 5) {
+			SM16703P_setAllPixels(finalColors[0], finalColors[1], finalColors[2], finalColors[3], finalColors[4]);
+		} else if (finalColors.size() == 4) {
+			SM16703P_setAllPixels(finalColors[0], finalColors[1], finalColors[2], finalColors[3]);
+		} else{
+			SM16703P_setAllPixels(finalColors[0], finalColors[1], finalColors[2]);
+		}
 		SM16703P_Show();
 	}
 #endif
