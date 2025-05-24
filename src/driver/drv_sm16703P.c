@@ -364,21 +364,21 @@ void SM16703P_setAllPixels(int r, int g, int b, ...) {
         case SM16703P_COLOR_ORDER_BGR:
         case SM16703P_COLOR_ORDER_GRB:
         case SM16703P_COLOR_ORDER_GBR:
-            channels = 4; break;
+            channels = 3; break;
         case SM16703P_COLOR_ORDER_RGBW:
         case SM16703P_COLOR_ORDER_RBGW:
         case SM16703P_COLOR_ORDER_BRGW:
         case SM16703P_COLOR_ORDER_BGRW:
         case SM16703P_COLOR_ORDER_GRBW:
         case SM16703P_COLOR_ORDER_GBRW:
-            channels = 5; break;
+            channels = 4; break;
         case SM16703P_COLOR_ORDER_RGBCW:
         case SM16703P_COLOR_ORDER_RBGCW:
         case SM16703P_COLOR_ORDER_BRGCW:
         case SM16703P_COLOR_ORDER_BGRCW:
         case SM16703P_COLOR_ORDER_GRBCW:
         case SM16703P_COLOR_ORDER_GBRCW:
-            channels = 6; break;
+            channels = 5; break;
         default:
             return;  // Invalid color order
     }
